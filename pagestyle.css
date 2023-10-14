@@ -3,30 +3,34 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
 }
 
-header {
+aside {
+    flex: 1;
     background-color: #ffb6c1;
     color: #FFF;
     padding: 10px;
+    height: 100vh; /* Make sidebar full height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 nav li {
-    float: left;
+    margin-bottom: 10px; /* Add space between menu items */
 }
 
 nav a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -36,7 +40,9 @@ nav a:hover {
 }
 
 main {
+    flex: 4;
     padding: 20px;
+    overflow-y: auto; /* Add scroll to main content if necessary */
 }
 
 footer {
@@ -48,3 +54,4 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
